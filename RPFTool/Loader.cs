@@ -42,37 +42,37 @@ namespace RPFTool
 
                     this.Invoke((MethodInvoker)delegate
                     {
-                        label_Loading.Text = "Checking for updates...";
+                        label_Loading.Text = "Loading...";
                     });
 
 
-                    XDocument updateXML = XDocument.Load(@"http://tmacdev.com/updates/update.xml");
+                    //XDocument updateXML = XDocument.Load(@"http://tmacdev.com/updates/update.xml");
 
-                    var latestVersion = updateXML.Element("application").Element("version");
-                    var updateURL = updateXML.Element("application").Element("url");
+                    //var latestVersion = updateXML.Element("application").Element("version");
+                   // var updateURL = updateXML.Element("application").Element("url");
 
-                    if (Version < Convert.ToDouble(latestVersion.Value))
-                    {
-                        this.Invoke((MethodInvoker)delegate
-                        {
-                            if (MessageBox.Show("There is an updated version of RPF Tool available, download now?", "Update?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                            {
-                                try
-                                {
-                                    DownloadForm dlForm = new DownloadForm();
-                                    dlForm.URL = updateURL.Value;
-                                    this.Hide();
-                                    //dlForm.Closed += (sender2, args) => 
-                                    dlForm.ShowDialog();
-                                    this.Show();
-                                }
-                                catch (System.Exception ex)
-                                {
-                                    MessageBox.Show("Failed to download the latest version:" + ex.Message + Environment.NewLine + updateURL.Value.ToString(), "Error!", MessageBoxButtons.OK);
-                                }
-                            }
-                        });
-                    }
+                    //if (Version < Convert.ToDouble(latestVersion.Value))
+                    //{
+                    //    this.Invoke((MethodInvoker)delegate
+                    //    {
+                    //        if (MessageBox.Show("There is an updated version of RPF Tool available, download now?", "Update?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    //        {
+                    //            try
+                    //            {
+                    //                DownloadForm dlForm = new DownloadForm();
+                    //                dlForm.URL = updateURL.Value;
+                    //                this.Hide();
+                    //                //dlForm.Closed += (sender2, args) => 
+                    //                dlForm.ShowDialog();
+                    //                this.Show();
+                    //            }
+                    //            catch (System.Exception ex)
+                    //            {
+                    //                MessageBox.Show("Failed to download the latest version:" + ex.Message + Environment.NewLine + updateURL.Value.ToString(), "Error!", MessageBoxButtons.OK);
+                    //            }
+                    //        }
+                    //    });
+                    //}
                 }
                 catch (System.Exception ex)
                 {

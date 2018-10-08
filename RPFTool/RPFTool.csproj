@@ -57,12 +57,16 @@
     <ApplicationIcon>rpf.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -79,7 +83,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aboutform.cs" />
+    <Compile Include="aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="aboutform.Designer.cs">
       <DependentUpon>aboutform.cs</DependentUpon>
     </Compile>
@@ -186,32 +192,40 @@
     <Compile Include="Compression\zlib\ZStreamException.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DownloadForm.cs" />
+    <Compile Include="DownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DownloadForm.Designer.cs">
       <DependentUpon>DownloadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extracting.cs" />
+    <Compile Include="Extracting.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Extracting.Designer.cs">
       <DependentUpon>Extracting.cs</DependentUpon>
     </Compile>
-    <Compile Include="gameSelection.cs" />
+    <Compile Include="gameSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gameSelection.Designer.cs">
       <DependentUpon>gameSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="iniReader.cs" />
     <Compile Include="keyHolder.cs" />
-    <Compile Include="mainForm.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Loader.cs" />
+    <Compile Include="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loader.Designer.cs">
       <DependentUpon>Loader.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjectListView\CellEditing\CellEditKeyEngine.cs" />
-    <Compile Include="ObjectListView\CellEditing\CellEditors.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ObjectListView\CellEditing\CellEditors.cs" />
     <Compile Include="ObjectListView\CellEditing\EditorRegistry.cs" />
     <Compile Include="ObjectListView\DataListView.cs">
       <SubType>Component</SubType>
@@ -358,27 +372,39 @@
     <Compile Include="RPFLib\RPF3\MagicId.cs" />
     <Compile Include="RPFLib\RPF3\TOC.cs" />
     <Compile Include="RPFLib\Version7.cs" />
-    <Compile Include="Saving.cs" />
+    <Compile Include="Saving.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Saving.Designer.cs">
       <DependentUpon>Saving.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewers\xscView.cs" />
+    <Compile Include="Viewers\xscView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Viewers\xscView.Designer.cs">
       <DependentUpon>xscView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewers\StringsView.cs" />
+    <Compile Include="Viewers\StringsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Viewers\StringsView.Designer.cs">
       <DependentUpon>StringsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewers\TextureView.cs" />
+    <Compile Include="Viewers\TextureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Viewers\TextureView.Designer.cs">
       <DependentUpon>TextureView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewers\TextView.cs" />
+    <Compile Include="Viewers\TextView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Viewers\TextView.Designer.cs">
       <DependentUpon>TextView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewers\xscViewV7.cs" />
+    <Compile Include="Viewers\xscViewV7.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Viewers\xscViewV7.Designer.cs">
       <DependentUpon>xscViewV7.cs</DependentUpon>
     </Compile>
